@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;800&display=swap');
+:root {
+    --primary-color:#6d28d9;
+    --secondary-color: #2e1065;
+    --border-color: #e5e7eb;
+    --bg-color: #F4F7FD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--bg-color);
+    font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+// Utilities
+.containerNinish{
+    max-width: 1200px;
+    width: 100%;
+}
+.logo{
+    width: 6rem;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.hamBtn{
+    font-size: 2rem;
+}
+.circ {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+
+// Header
+header {
+    background: white;
+}
+
+// Common Nav
+nav{
+    i{
+        font-size: 1.5rem;
+    }
+    img{
+        width: 2rem;
+    }
+    a,.eventNavLinkMobile{
+        color: black;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
+
+// Desktop Nav Links
+.desktopNavLinks{
+    a{
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        transition: 0.1s ease;
+    }
+    .eventNavLinkDesktop{
+        position: relative;
+        .previousEventsDesktop{
+            display: none;
+            padding: 0.4rem;
+            .nestedNavLink {
+                a{
+                    gap: 0.5rem;
+                    &:hover{
+                        background: rgba(0, 0, 0, 0.055);
+                    }
+                }
+            }
+        }
+        &:hover .previousEventsDesktop{
+            display: block;
+            position: absolute;
+            width: 18rem;
+            background: white;
+            transform: translateX(-20%);
+        }
+    }
+}
+
+// Mobile Nav Links
+.mobileNavLinks{
+    ul{
+        .nestedNavLink {
+            a{
+                display: flex!important;
+                align-items: center;
+                width: 100%;
+                gap: 0.5rem;
+                &:hover{
+                    background: rgba(0, 0, 0, 0.055);
+                }
+            }
+            &:last-child{
+                a{
+                    margin-bottom: -9px;
+                }
+            }
+        }
+        width: 100%;
+        li{
+            a,&.eventNavLinkMobile{
+                border-bottom: 1px solid var(--border-color);
+                display: block;
+                padding: 0.5rem 0;
+                cursor: pointer;
+            }
+        }
+        .previousEventsMobile{
+            a{
+                border-top: 1px solid var(--border-color);
+                border-bottom: none;
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+
+
+// Banner
+// .banner {
+//     position: relative;
+//     background: url("./src/assets/images/banner.jpg") no-repeat center center/cover;
+//     border-radius: 10px;
+//     z-index: -2;
+//     &::after{
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         height: 100%;
+//         width: 100%;
+//         background-image: linear-gradient(to top right, #0f172a,var(--secondary-color) );
+//         border-radius: 10px;
+//         opacity: 0.95;
+//         z-index: -1;
+//     }
+// }
+
+// .bannerMoney{
+//     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+//     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+// }
+
+// Testimonial Image
+.testimonialImage{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--bg-color);
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// Events
+.eventBanner{
+    height: 250px;
+    position: relative;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+
+// Single Event
+.singleEvent{
+    position: relative;
+    .singleEventBanner
+    {
+        height: 600px;
+        position: relative;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to top right, #0f172a,var(--secondary-color) );
+            border-radius: 15px;
+            opacity: 0.75;
+        }
+    }
+}
+
+// Event Winners
+.winnerOne{
+    height: 530px;
+}
+
+// Footer
+.importantLink{
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+.contactInfo{
+    color: var(--primary-color);
+}
+
+.socialLinks{
+    i{
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
