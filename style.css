@@ -112,7 +112,7 @@ nav a:hover, nav .eventNavLinkMobile:hover {
 .mobileNavLinks ul .previousEventsMobile a {
   border-top: 1px solid var(--border-color);
   border-bottom: none;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .testimonialImage {
